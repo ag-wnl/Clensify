@@ -1,0 +1,24 @@
+{
+  "name": "clensify",
+  "version": "1.0.0",
+  "description": "Clensify content which appears on your web platforom.",
+  "main": "./dist/ index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup"
+  },
+  "keywords": [
+    "antiswear",
+    "profanity",
+    "swear-filtering",
+    "swear-word-filter",
+    "bad-word-filter"
+  ],
+  "author": "ag_wnl",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  }
+}
