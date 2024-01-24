@@ -1,2 +1,4 @@
-# Clensify - Cleans your platform from profanity/obscenity
+# Clensify 
+
+Cleans your platform from profanity/obscenity
 
