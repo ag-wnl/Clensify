@@ -1,7 +1,31 @@
 import { confusables } from "./mappings/confusion";
 import { leetSpeakMap } from "./mappings/leetspeakMap";
 
-// Used to preprocess given input string to help with
+
+/**
+ *  Preprocessor functions aimed to reduce filtering complexity as much as possible, simpilfying inputs using
+ *  various techniques
+ * 
+ * Functions : 
+ * 1) onlyAlphabetCharacters : Only includes alphabet characters of original string
+ * 1) leetspeakDecode : decode's leet-speak coded strings
+ */
+
+export const onlyAlphabetCharacters = (givenString : string) => {
+    let badString = givenString;
+    badString = badString.toLocaleLowerCase();
+
+    let onlyAlphabets : string = 'abcdefghijklmnopqrstuvwxyz';
+    let outputString = '';
+
+    for(let char of givenString) {
+        if(onlyAlphabets.includes(char) || char === ' ') {
+            outputString += char;
+        }
+    }
+    return outputString;
+}
+
 
 export const leetspeakDecode = (givenString : string) => {
     let cleanString = '';
@@ -23,18 +47,13 @@ export const leetspeakDecode = (givenString : string) => {
             if(found == 0) cleanString += char;
         }
     }
-
     return cleanString;
 }
-
-
-
 
 
 export const preProcess = (givenString : string) => {
 
     // let resultingString = givenString.replace(/\s/g, ""); // removes black spaces, not doing currently
-
     let cleanString = '';
 
     // Replacing any confusable characters in the string:
@@ -56,12 +75,8 @@ export const preProcess = (givenString : string) => {
         }
     }  
 
-
     //Converting string to lowercase:
     cleanString = cleanString.toLowerCase();
-
-
-    //now in This stage of preprocessing, we intend to map leet-speak:
     
     return cleanString;
 }
