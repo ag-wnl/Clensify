@@ -8,7 +8,7 @@ import { leetSpeakMap } from "./mappings/leetspeakMap";
  * 
  * Functions : 
  * 1) onlyAlphabetCharacters : Only includes alphabet characters of original string
- * 1) leetspeakDecode : decode's leet-speak coded strings
+ * 2) leetspeakDecode : decode's leet-speak coded strings
  */
 
 export const onlyAlphabetCharacters = (givenString : string) => {
