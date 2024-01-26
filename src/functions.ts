@@ -6,7 +6,6 @@ export const clensifyText = (inp : userInput) => {
 
     badString = badString.replace(/\s/g, "");  // removing all white spaces in string
 
-    
 }
 
 interface userInput {
