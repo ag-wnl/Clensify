@@ -1,1 +1,6 @@
 to build : npm run build
+
+
+ - Currently doing Bloom Filtering to detect profanity.
+
+ - Implementing a strategy in trie to detect profanity. Trying to add some contextual information too.

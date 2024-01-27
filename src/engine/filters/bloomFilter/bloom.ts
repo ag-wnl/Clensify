@@ -17,6 +17,8 @@
  * 
  * For finding optimal size of filter, reference : https://hur.st/bloomfilter/?n=4000&p=1.0E-7&m=&k=
  * 
+ * 
+ * 
  * @example:
  * 
       const wordsToAdd = googleBadWords;
