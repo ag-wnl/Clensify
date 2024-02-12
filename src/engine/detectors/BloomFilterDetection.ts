@@ -1,6 +1,7 @@
 import { googleBadWords } from "../../dataset/googleBadWords";
 import { BloomFilter } from "../filters/bloomFilter/bloom";
 import { optimalFilterSize } from "../filters/bloomFilter/formulas/optimalBloomDimension";
+import { wordTokenizeInput } from "../tokenizers/wordTokenizer";
 
 
 export const bloomFilterCheck = (inputString : string) : boolean => {
@@ -14,7 +15,7 @@ export const bloomFilterCheck = (inputString : string) : boolean => {
     const bloomFilter = new BloomFilter(filterSize, numberOfHashFunctions);
     wordsToAdd.forEach(word => bloomFilter.add(word));
     
-    const inputWords : Array<string> = inputString.split(/\s*, \s*/);    
+    const inputWords : Array<string> = wordTokenizeInput(inputString);    
 
 
     let isProfanity : boolean = false;
